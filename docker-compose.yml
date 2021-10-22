@@ -1,0 +1,12 @@
+version: '1'
+services:
+  weather-app:
+    conatiner_name: weather-app-container
+    image: weather-app-image
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes: 
+      - /:/src/app
